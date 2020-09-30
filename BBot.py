@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
 import datetime
 import time
 
@@ -23,7 +22,7 @@ def class_time():
 
 # driver creation, set microphone and webcam permissions
 def set_driver():
-    opt = Options()
+    opt = webdriver.ChromeOptions()
     opt.add_experimental_option("prefs", {
         "profile.default_content_setting_values.media_stream_mic": 1,
         "profile.default_content_setting_values.media_stream_camera": 1
